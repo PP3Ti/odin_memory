@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/odin_memory/static/css/main.5a8b8968.css",
+    "main.js": "/odin_memory/static/js/main.e94bae3c.js",
+    "static/media/title.png": "/odin_memory/static/media/title.e93152c8b9160d3198d7.png",
+    "static/media/pokeball.png": "/odin_memory/static/media/pokeball.c85373b997500c76b389.png",
+    "index.html": "/odin_memory/index.html",
+    "main.5a8b8968.css.map": "/odin_memory/static/css/main.5a8b8968.css.map",
+    "main.e94bae3c.js.map": "/odin_memory/static/js/main.e94bae3c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a8b8968.css",
+    "static/js/main.e94bae3c.js"
+  ]
+}
