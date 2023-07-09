@@ -3,13 +3,17 @@
   padding: 0
 
 .app
-  height: 100dvh
+  min-height: 100vh
   font-family: 'Inter', sans-serif
   display: grid 
   grid-template-columns: 1fr
   grid-template-rows: 200px 1fr 
   justify-content: center
   color: aliceblue
+  position: relative
+
+.start-dialog::backdrop
+  background: black
 
 .start-screen
   position: fixed
@@ -38,77 +42,70 @@
   button:hover
     box-shadow: inset 0 0 15px 0 aliceblue
 
-
-
 .main, header
   display: flex
   justify-content: center
-  align-items: center
   background-color: #121212
 
 .main
   padding-top: 20px
-  flex-basis: auto
+  align-items: flex-start
+  background: #282828
 
 header
   flex-direction: column
   font-size: 3rem
   font-weight: 700
-  justify-content: center
+  align-items: center
+  position: sticky
+  top: 0
+  background: #121212
+  border-bottom: 2px solid aliceblue
 
-  p
-    margin: -10px
+  .title
+    margin-top: -10px
+    margin-bottom: 10px
 
+  .score
+    margin: 0 30px 0 30px
+    font-size: 1.5rem
+    border: 2px solid aliceblue
+    border-radius: 8px
+    padding: 15px 30px
+    position: fixed
+
+  .current-score
+    top: 10%
+    left: 0
+
+  .highscore
+    top: 10%
+    right: 0
 
 .cards 
-  width: minmax(50%, 1000px)
-  height: 30%
-  display: grid
-  grid-template-rows: repeat(3, 1fr)
-  grid-template-columns: repeat(4, 1fr)
-  gap: 15px
+  display: none
+  min-width: 95%
+  flex-wrap: wrap
   justify-content: center
-  align-self: flex-start
+  gap: 15px
+  padding: 0 30px 0 30px
 
 .card 
-  height: 80%
-  width: 80%
-
-
-.card-front
+  width: 10%
   display: flex
-  flex-direction: column
+  justify-content: center
   align-items: center
-  justify-content: space-evenly
-  font-size: 2rem
   border: 2px solid aliceblue
   border-radius: 8px
   padding: 15px
-  height: 100%
-  width: 100%
+  background: #121212
 
-  
-.card-front:hover
+  img
+    width: 80%
+    height: auto
+
+.card:hover
   box-shadow: 0 0 15px 0 aliceblue
 
 .display
   opacity: 0
-
-.score
-  margin-bottom: 20px
-  font-size: 2rem
-  border: 2px solid aliceblue
-  border-radius: 8px
-  padding: 15px 30px
-
-.current-score
-  position: fixed
-  top: 20%
-  left: 10%
-  transform: translate(-50%, -35%)
-
-.highscore
-  position: fixed
-  top: 20%
-  right: 10%
-  transform: translate(50%, -35%)

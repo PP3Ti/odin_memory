@@ -4,7 +4,7 @@ export default function Cards({ pokemons, handleCardClick }) {
 
   return (
     <div className="cards">
-      {pokemons.map(pokemon => <Card pokemon={pokemon} handleCardClick={handleCardClick}/>)}
+      {pokemons.map(pokemon => <Card pokemon={pokemon} handleCardClick={handleCardClick} key={pokemon.id}/>)}
     </div>
   )
 }
